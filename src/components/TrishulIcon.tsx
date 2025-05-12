@@ -16,7 +16,7 @@ const TrishulIcon: React.FC<TrishulIconProps> = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 120"
-      className={className}
+      className={className + " trishul-animation"}
       fill="none"
       strokeWidth="3"
       stroke={stroke}
