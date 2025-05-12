@@ -1,9 +1,6 @@
-
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-trika-dark text-white">
+  return <footer className="bg-trika-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
@@ -54,18 +51,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 mt-1 text-trika-purple" />
-                <span className="text-gray-300">contact@trika.ai</span>
+                <span className="text-gray-300">bijal@trika.ai</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 mt-1 text-trika-purple" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+91 98203 97328</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 mt-1 text-trika-purple" />
-                <span className="text-gray-300">
-                  123 AI Innovation Drive,<br />
-                  San Francisco, CA 94103
-                </span>
+                
               </li>
             </ul>
           </div>
@@ -83,8 +77,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

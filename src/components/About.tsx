@@ -1,11 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TrishulIcon from "./TrishulIcon";
-
 const About = () => {
-  return (
-    <section id="about" className="section-padding bg-white">
+  return <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -86,24 +83,12 @@ const About = () => {
           
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
-              <img 
-                src="/images/about-image.jpg" 
-                alt="Trika.ai team" 
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80";
-                }}
-              />
+              <img src="/images/about-image.jpg" alt="Trika.ai team" className="w-full h-full object-cover" onError={e => {
+              e.currentTarget.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80";
+            }} />
             </div>
             
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-4 shadow-lg max-w-xs">
-              <div className="flex items-center mb-2">
-                <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
-                <p className="font-medium">Success Rate</p>
-              </div>
-              <div className="text-2xl font-bold text-trika-primary mb-1">98.7%</div>
-              <p className="text-sm text-trika-gray">Project success rate over 5 years</p>
-            </div>
+            
             
             <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-lg max-w-xs">
               <div className="flex items-center mb-2">
@@ -126,8 +111,6 @@ const About = () => {
           </linearGradient>
         </defs>
       </svg>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
