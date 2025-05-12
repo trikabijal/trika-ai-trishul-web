@@ -43,9 +43,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Enterprise Experience</h3>
-                  <p className="text-trika-gray">
-                    25+ years building mission-critical software that doesn't break
-                  </p>
+                  <p className="text-trika-gray">25+ years building Enterprise class, mission-critical robust software </p>
                 </div>
               </div>
               
@@ -55,9 +53,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">AI Expertise</h3>
-                  <p className="text-trika-gray">
-                    Deep understanding of LLMs, agents, and automation architectures
-                  </p>
+                  <p className="text-trika-gray">Deep understanding of Gen AI, LLMs, Agents, and Automation Architectures</p>
                 </div>
               </div>
               
