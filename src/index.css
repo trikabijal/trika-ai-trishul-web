@@ -113,6 +113,10 @@
     background: linear-gradient(90deg, #F97316 0%, #F0B429 50%, #FEF7CD 100%);
   }
 
+  .trika-gradient {
+    background: linear-gradient(135deg, #F97316 0%, #F0B429 100%);
+  }
+
   .section-padding {
     @apply py-16 md:py-24;
   }
@@ -131,5 +135,18 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+  }
+  
+  .trishul-animation {
+    animation: trishul-glow 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes trishul-glow {
+    from {
+      filter: drop-shadow(0 0 2px rgba(249, 115, 22, 0.3));
+    }
+    to {
+      filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.8));
+    }
   }
 }
