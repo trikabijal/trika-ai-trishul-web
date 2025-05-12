@@ -1,10 +1,10 @@
 
-import { Robot, Search, Code } from "lucide-react";
+import { Bot, Search, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: <Robot className="h-8 w-8 text-white" />,
+    icon: <Bot className="h-8 w-8 text-white" />,
     title: "AI Agents Development",
     description:
       "We build intelligent AI agents that automate complex tasks and workflows, creating efficient systems that adapt and learn.",
