@@ -24,11 +24,10 @@ const About = () => {
               <TrishulIcon className="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#about-trishul-gradient)" />
               <div>
                 <h3 className="font-bold text-lg mb-2">The Power of Trishul</h3>
-                <p className="text-trika-gray">
-                  The Trishul of Lord Shiva symbolizes the power to create, preserve, and transform—mirroring 
-                  our mission to create intelligent AI agents, preserve business value through strategic 
-                  automation, and transform industries with modern technology.
-                </p>
+                <p className="text-trika-gray">The Trishul of Lord Shiva symbolizes the power to Create, Preserve, and Transform — mirroring our mission to 
+- Create intelligent AI agents, 
+- Preserve business value through strategic automation, and 
+- Transform industries with modern technology.</p>
               </div>
             </div>
             
