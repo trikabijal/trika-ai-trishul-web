@@ -14,7 +14,7 @@ const services = [
       "Ongoing optimization and maintenance",
       "Enterprise-grade reliability and security"
     ],
-    color: "bg-trika-purple"
+    color: "bg-trika-primary"
   },
   {
     icon: <Search className="h-8 w-8 text-white" />,
@@ -27,7 +27,7 @@ const services = [
       "ROI forecasting and measurement",
       "Strategic implementation roadmap"
     ],
-    color: "gold-gradient"
+    color: "bg-trika-secondary"
   },
   {
     icon: <Code className="h-8 w-8 text-white" />,
@@ -49,12 +49,12 @@ const Services = () => {
     <section id="services" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block mb-3 px-3 py-1 rounded-full bg-trika-purple bg-opacity-10 text-trika-purple text-sm font-medium">
+          <div className="inline-block mb-3 px-3 py-1 rounded-full bg-trika-accent bg-opacity-30 text-trika-primary text-sm font-medium">
             Our Services
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Create, Preserve, Transform with the{" "}
-            <span className="text-gradient">Power of Trika</span>
+            <span className="sun-gradient">Power of Trika</span>
           </h2>
           <p className="text-lg text-trika-gray">
             Reflecting the Trishul of Lord Shiva, our services create intelligent solutions,
@@ -66,7 +66,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100 group hover:border-trika-purple"
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100 group hover:border-trika-primary"
             >
               <div className={`${service.color} rounded-lg h-14 w-14 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                 {service.icon}
@@ -76,12 +76,12 @@ const Services = () => {
               <ul className="space-y-3 mb-6">
                 {service.details.map((detail, i) => (
                   <li key={i} className="flex items-start">
-                    <span className="text-trika-purple mr-2 mt-1">•</span>
+                    <span className="text-trika-primary mr-2 mt-1">•</span>
                     <span>{detail}</span>
                   </li>
                 ))}
               </ul>
-              <Button variant="link" className="text-trika-purple p-0 hover:underline">
+              <Button variant="link" className="text-trika-primary p-0 hover:underline">
                 Learn more
               </Button>
             </div>

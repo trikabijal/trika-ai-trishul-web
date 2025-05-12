@@ -64,11 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
                 trika: {
-                    purple: '#5E17EB',
-                    gold: '#F0B429',
-                    light: '#F8F8FC',
-                    dark: '#1A1F2C',
-                    gray: '#64748B'
+                    primary: '#F97316',    // Bright orange
+                    secondary: '#F0B429',  // Gold/yellow
+                    accent: '#FBBF24',     // Amber
+                    light: '#FEF7CD',      // Soft yellow
+                    peach: '#FDE1D3',      // Soft peach
+                    dark: '#403E43',       // Dark gray
+                    gray: '#8E9196'        // Neutral gray
                 }
 			},
 			borderRadius: {

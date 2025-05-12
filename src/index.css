@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 264 84% 50%;
+    --primary: 24 95% 53%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 43 96% 58%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 45 96% 53%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -93,12 +93,24 @@
     @apply bg-background text-foreground;
   }
 
-  .trika-gradient {
-    background: linear-gradient(135deg, #5E17EB 0%, #9747FF 100%);
+  .sun-gradient {
+    background: linear-gradient(135deg, #F97316 0%, #F0B429 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .orange-gradient {
+    background: linear-gradient(135deg, #F97316 0%, #FDBA74 100%);
   }
 
   .gold-gradient {
     background: linear-gradient(135deg, #F0B429 0%, #F7C948 100%);
+  }
+
+  .sunrise-gradient {
+    background: linear-gradient(90deg, #F97316 0%, #F0B429 50%, #FEF7CD 100%);
   }
 
   .section-padding {
@@ -106,7 +118,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #5E17EB 0%, #9747FF 100%);
+    background: linear-gradient(135deg, #F97316 0%, #F0B429 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
