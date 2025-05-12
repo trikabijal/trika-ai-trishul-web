@@ -113,12 +113,16 @@ const verticals = [
 
 const Verticals = () => {
   const [activeVertical, setActiveVertical] = useState(0);
+  
+  const handleDemo = () => {
+    alert("Demo request form would appear here.");
+  };
 
   return (
     <section id="verticals" className="section-padding bg-trika-light">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block mb-3 px-3 py-1 rounded-full bg-trika-purple bg-opacity-10 text-trika-purple text-sm font-medium">
+          <div className="inline-block mb-3 px-3 py-1 rounded-full bg-orange-100 text-trika-primary text-sm font-medium">
             Industry Solutions
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -139,13 +143,13 @@ const Verticals = () => {
                   key={index}
                   className={`w-full text-left p-4 rounded-lg flex items-center justify-between transition-all ${
                     activeVertical === index
-                      ? "bg-trika-purple text-white"
+                      ? "bg-trika-primary text-white"
                       : "hover:bg-gray-100"
                   }`}
                   onClick={() => setActiveVertical(index)}
                 >
                   <div className="flex items-center">
-                    <div className={`mr-3 ${activeVertical === index ? "text-white" : "text-trika-purple"}`}>
+                    <div className={activeVertical === index ? "text-white mr-3" : "text-trika-primary mr-3"}>
                       {vertical.icon}
                     </div>
                     <span className="font-medium">{vertical.title}</span>
@@ -161,25 +165,28 @@ const Verticals = () => {
           <div className="lg:col-span-9">
             <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
               <h3 className="text-2xl font-bold mb-6 flex items-center">
-                <span className="text-trika-purple mr-3">{verticals[activeVertical].icon}</span>
+                <span className="text-trika-primary mr-3">{verticals[activeVertical].icon}</span>
                 {verticals[activeVertical].title} Use Cases
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {verticals[activeVertical].cases.map((useCase, index) => (
-                  <div key={index} className="border border-gray-100 rounded-lg p-5 hover:border-trika-purple transition-colors">
+                  <div key={index} className="border border-gray-100 rounded-lg p-5 hover:border-trika-primary transition-colors">
                     <h4 className="text-lg font-bold mb-3">{useCase.title}</h4>
                     <p className="text-sm text-trika-gray mb-4">{useCase.description}</p>
                     <div className="bg-trika-light rounded-md p-3">
                       <p className="text-sm font-medium">Results:</p>
-                      <p className="text-sm text-trika-purple">{useCase.results}</p>
+                      <p className="text-sm text-trika-primary">{useCase.results}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-8 text-center">
-                <Button className="trika-gradient text-white px-6 hover:opacity-90">
+                <Button 
+                  className="bg-trika-primary hover:bg-trika-primary/90 text-white px-6" 
+                  onClick={handleDemo}
+                >
                   Request a Demo
                 </Button>
               </div>

@@ -1,7 +1,14 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TrishulIcon from "./TrishulIcon";
+
 const About = () => {
+  const handleMeetTeam = () => {
+    // For demo purposes, show an alert
+    alert("Meet our team page would appear here.");
+  };
+  
   return <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -20,14 +27,16 @@ const About = () => {
               inspiration from the Sanskrit concept of "Trika" — the triad of 
               Consciousness, Energy, and Matter that forms the foundation of all existence.
             </p>
-            <div className="flex items-center gap-6 mb-6 p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg border border-orange-100">
+            <div className="flex items-start gap-6 mb-6 p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg border border-orange-100">
               <TrishulIcon className="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#about-trishul-gradient)" />
               <div>
                 <h3 className="font-bold text-lg mb-2">The Power of Trishul</h3>
-                <p className="text-trika-gray">The Trishul of Lord Shiva symbolizes the power to Create, Preserve, and Transform — mirroring our mission to 
-- Create intelligent AI agents, 
-- Preserve business value through strategic automation, and 
-- Transform industries with modern technology.</p>
+                <p className="text-trika-gray mb-2">The Trishul of Lord Shiva symbolizes the power to Create, Preserve, and Transform — mirroring our mission:</p>
+                <ul className="list-disc pl-5 text-trika-gray space-y-1">
+                  <li>Create intelligent AI agents that solve real business problems</li>
+                  <li>Preserve business value through strategic automation</li>
+                  <li>Transform industries with modern technology and ancient wisdom</li>
+                </ul>
               </div>
             </div>
             
@@ -43,7 +52,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Enterprise Experience</h3>
-                  <p className="text-trika-gray">25+ years building Enterprise class, mission-critical robust software </p>
+                  <p className="text-trika-gray">25+ years building Enterprise class, mission-critical robust software </p>
                 </div>
               </div>
               
@@ -70,7 +79,7 @@ const About = () => {
               </div>
             </div>
             
-            <Button className="group">
+            <Button className="group" onClick={handleMeetTeam}>
               Meet Our Team
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -82,8 +91,6 @@ const About = () => {
               e.currentTarget.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80";
             }} />
             </div>
-            
-            
             
             <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-lg max-w-xs">
               <div className="flex items-center mb-2">
@@ -108,4 +115,5 @@ const About = () => {
       </svg>
     </section>;
 };
+
 export default About;
