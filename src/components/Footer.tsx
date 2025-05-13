@@ -14,15 +14,9 @@ const Footer = () => {
               enterprise-grade automation solutions that stand the test of time.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="h-10 w-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-trika-purple transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="h-10 w-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-trika-purple transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="h-10 w-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-trika-purple transition-colors">
-                <Github className="h-5 w-5" />
-              </a>
+              
+              
+              
             </div>
           </div>
           
@@ -31,7 +25,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Team</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+              
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
             </ul>
           </div>
