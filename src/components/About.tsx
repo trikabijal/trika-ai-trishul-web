@@ -2,24 +2,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TrishulIcon from "./TrishulIcon";
+import { Link } from "react-router-dom";
 
 const About = () => {
-  const handleMeetTeam = () => {
-    // For demo purposes, show an alert
-    alert("Meet our team page would appear here.");
-  };
-  
   return <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full bg-orange-100 text-trika-primary text-sm font-medium">
-              <TrishulIcon className="w-5 h-5" fill="none" stroke="currentColor" />
+              <img src="/lovable-uploads/3403717f-88e4-4c64-8bd4-cb96d69e826e.png" alt="Trika logo" className="w-5 h-5 object-contain" />
               About Trika.ai
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Where Ancient Wisdom Meets{" "}
-              <span className="text-gradient">Modern Technology</span>
+              Where Foundational Computer Science Meets{" "}
+              <span className="text-gradient">Modern Generative AI</span>
             </h2>
             <p className="text-lg text-trika-gray mb-6">
               Trika.ai is founded on the principle that the most powerful solutions 
@@ -28,14 +24,14 @@ const About = () => {
               Consciousness, Energy, and Matter that forms the foundation of all existence.
             </p>
             <div className="flex items-start gap-6 mb-6 p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg border border-orange-100">
-              <TrishulIcon className="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#about-trishul-gradient)" />
+              <img src="/lovable-uploads/3403717f-88e4-4c64-8bd4-cb96d69e826e.png" alt="Trika logo" className="w-16 h-16 object-contain flex-shrink-0" />
               <div>
                 <h3 className="font-bold text-lg mb-2">The Power of Trishul</h3>
-                <p className="text-trika-gray mb-2">The Trishul of Lord Shiva symbolizes the power to Create, Preserve, and Transform — mirroring our mission:</p>
+                <p className="text-trika-gray mb-2">The Trishul of Lord Shiva symbolizes the three essential powers:</p>
                 <ul className="list-disc pl-5 text-trika-gray space-y-1">
-                  <li>Create intelligent AI agents that solve real business problems</li>
-                  <li>Preserve business value through strategic automation</li>
-                  <li>Transform industries with modern technology and ancient wisdom</li>
+                  <li><strong>Create</strong>: We build intelligent AI agents that solve real business problems</li>
+                  <li><strong>Preserve</strong>: We maintain business value through strategic automation</li>
+                  <li><strong>Transform</strong>: We revolutionize industries with modern technology and ancient wisdom</li>
                 </ul>
               </div>
             </div>
@@ -79,9 +75,11 @@ const About = () => {
               </div>
             </div>
             
-            <Button className="group" onClick={handleMeetTeam}>
-              Meet Our Team
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <Button className="group" asChild>
+              <Link to="/team">
+                Meet Our Team
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </div>
           
@@ -103,16 +101,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      
-      {/* SVG gradient definitions for the Trishul */}
-      <svg width="0" height="0" className="absolute">
-        <defs>
-          <linearGradient id="about-trishul-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#F97316" />
-            <stop offset="100%" stopColor="#F0B429" />
-          </linearGradient>
-        </defs>
-      </svg>
     </section>;
 };
 

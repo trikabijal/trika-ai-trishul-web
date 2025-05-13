@@ -1,6 +1,8 @@
 
 import { Bot, Search, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import TrishulIcon from "./TrishulIcon";
 
 const services = [
   {
@@ -14,7 +16,8 @@ const services = [
       "Ongoing optimization and maintenance",
       "Enterprise-grade reliability and security"
     ],
-    color: "bg-trika-primary"
+    color: "bg-trika-primary",
+    link: "/services/ai-agents"
   },
   {
     icon: <Search className="h-8 w-8 text-white" />,
@@ -27,7 +30,8 @@ const services = [
       "ROI forecasting and measurement",
       "Strategic implementation roadmap"
     ],
-    color: "bg-trika-secondary"
+    color: "bg-trika-secondary",
+    link: "/services/ai-strategy"
   },
   {
     icon: <Code className="h-8 w-8 text-white" />,
@@ -40,7 +44,8 @@ const services = [
       "Multiple Capability Platform architecture",
       "Enterprise-grade reliability built-in"
     ],
-    color: "bg-trika-dark"
+    color: "bg-trika-dark",
+    link: "/services/software-development"
   }
 ];
 
@@ -49,7 +54,8 @@ const Services = () => {
     <section id="services" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block mb-3 px-3 py-1 rounded-full bg-trika-accent bg-opacity-30 text-trika-primary text-sm font-medium">
+          <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full bg-trika-accent bg-opacity-30 text-trika-primary text-sm font-medium">
+            <TrishulIcon className="w-5 h-5" fill="none" stroke="currentColor" />
             Our Services
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -81,8 +87,8 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Button variant="link" className="text-trika-primary p-0 hover:underline">
-                Learn more
+              <Button variant="link" className="text-trika-primary p-0 hover:underline" asChild>
+                <Link to={service.link}>Learn more</Link>
               </Button>
             </div>
           ))}

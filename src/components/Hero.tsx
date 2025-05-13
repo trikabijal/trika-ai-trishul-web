@@ -2,8 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TrishulIcon from "./TrishulIcon";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const openCalendly = () => {
+    window.open("https://calendly.com/bijal-trika/30min", "_blank");
+  };
+
   return (
     <div className="pt-28 pb-16 md:pt-36 md:pb-24 px-4 bg-gradient-to-br from-white to-trika-light">
       <div className="container mx-auto">
@@ -18,16 +23,25 @@ const Hero = () => {
               <span className="text-gradient">Ancient Wisdom</span>
             </h1>
             <p className="text-lg md:text-xl text-trika-gray mb-8 max-w-xl">
-              Where spiritual symbolism meets state-of-the-art automation—empowering 
+              Where Foundational Computer Science Meets Modern Generative AI—empowering 
               businesses to evolve with clarity, precision, and transformative impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="orange-gradient text-white px-8 py-6 text-lg hover:opacity-90">
+              <Button 
+                className="orange-gradient text-white px-8 py-6 text-lg hover:opacity-90"
+                onClick={openCalendly}
+              >
                 Book a Consultation
               </Button>
-              <Button variant="outline" className="group px-8 py-6 text-lg border-trika-primary text-trika-primary hover:bg-trika-primary hover:text-white">
-                View Case Studies
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button 
+                variant="outline" 
+                className="group px-8 py-6 text-lg border-trika-primary text-trika-primary hover:bg-trika-primary hover:text-white"
+                asChild
+              >
+                <Link to="/case-studies">
+                  View Case Studies
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -47,7 +61,7 @@ const Hero = () => {
                     <circle cx="12" cy="12" r="2" fill="white" />
                   </svg>
                 </div>
-                <TrishulIcon className="w-12 h-12" fill="none" stroke="url(#trishul-gradient)" />
+                <img src="/lovable-uploads/3403717f-88e4-4c64-8bd4-cb96d69e826e.png" alt="Trika logo" className="w-12 h-12 object-contain trishul-animation" />
               </div>
               <h3 className="text-2xl font-bold mb-4">25+ Years of Excellence</h3>
               <p className="text-trika-gray mb-6">
@@ -58,7 +72,7 @@ const Hero = () => {
               <div className="flex justify-between items-center border-t pt-6 border-gray-100">
                 <div>
                   <p className="font-medium">Bijal Sanghavi</p>
-                  <p className="text-sm text-trika-gray">Founder, Trika.ai</p>
+                  <p className="text-sm text-trika-gray">Founder & CEO, Trika.ai</p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-trika-primary font-medium">Experience That Matters</p>
