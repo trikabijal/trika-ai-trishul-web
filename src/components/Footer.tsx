@@ -62,8 +62,8 @@ const Footer = () => {
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex justify-center md:justify-end space-x-6 text-sm">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+              
+              
             </ul>
           </div>
         </div>
