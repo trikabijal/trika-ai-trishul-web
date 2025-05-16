@@ -17,7 +17,7 @@ const AxonoBlog = () => {
     setLoading(true);
     
     // Google OAuth configuration
-    const clientId = "YOUR_GOOGLE_CLIENT_ID"; // This should be replaced with your actual client ID
+    const clientId = "64596355684-nrea5clp2nbujt23aa695h3aj2d8mj83.apps.googleusercontent.com"; // This should be replaced with your actual client ID
     const redirectUri = `${window.location.origin}/auth/callback`;
     const scope = "https://www.googleapis.com/auth/gmail.readonly";
     
