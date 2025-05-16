@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import AxonoCaseStudy from "./pages/CaseStudy/Axono";
 import Blogs from "./pages/Blogs";
 import AxonoBlog from "./pages/Blog/AxonoBlog";
+import OAuthCallback from "./pages/Auth/OAuthCallback";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/axono-meeting-summaries" element={<AxonoBlog />} />
+          <Route path="/auth/callback" element={<OAuthCallback />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
