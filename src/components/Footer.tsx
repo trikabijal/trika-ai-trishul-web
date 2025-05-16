@@ -1,8 +1,6 @@
-
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
-
 const Footer = () => {
   return <footer id="contact" className="bg-trika-dark text-white">
       <div className="container mx-auto px-4 py-12">
@@ -47,10 +45,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 mr-3 mt-1 text-trika-primary" />
                 <span className="text-gray-300">bijal@trika.ai</span>
               </li>
-              <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-3 mt-1 text-trika-primary" />
-                <span className="text-gray-300">+91 98203 97328</span>
-              </li>
+              
             </ul>
           </div>
         </div>
