@@ -1,5 +1,5 @@
 
-import { ReactNode } from "react";
+import React from "react";
 import { Users, Briefcase, Globe, Database, Rocket } from "lucide-react";
 
 interface Case {
@@ -9,7 +9,7 @@ interface Case {
 }
 
 export interface Vertical {
-  icon: ReactNode;
+  icon: React.ReactNode;
   title: string;
   cases: Case[];
 }
