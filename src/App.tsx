@@ -12,6 +12,8 @@ import AIStrategy from "./pages/Services/AIStrategy";
 import SoftwareDevelopment from "./pages/Services/SoftwareDevelopment";
 import NotFound from "./pages/NotFound";
 import AxonoCaseStudy from "./pages/CaseStudy/Axono";
+import Blogs from "./pages/Blogs";
+import AxonoBlog from "./pages/Blog/AxonoBlog";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/services/ai-agents" element={<AIAgents />} />
           <Route path="/services/ai-strategy" element={<AIStrategy />} />
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/axono-meeting-summaries" element={<AxonoBlog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
