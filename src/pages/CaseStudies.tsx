@@ -7,6 +7,18 @@ import { Link } from "react-router-dom";
 
 const caseStudies = [
   {
+    title: "AXONO: Turning Meeting Notes into Actionable Tasks",
+    industry: "Technology",
+    challenge: "Organizations were struggling to transform AI-generated meeting notes into actionable tasks, resulting in lost commitments and reduced accountability.",
+    solution: "We developed AXONO, a system that seamlessly converts meeting notes from email into structured tasks within tools like Jira, Asana, and Todoist without requiring behavioral change.",
+    results: [
+      "85% reduction in lost action items from meetings",
+      "42% increase in post-meeting task completion rates",
+      "2.5 hours saved per week per user on manual task entry"
+    ],
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+  },
+  {
     title: "Intelligent Document Processing for Legal Firm",
     industry: "Legal",
     challenge: "A law firm struggling with thousands of documents needed a solution to automatically extract, categorize, and summarize key information.",

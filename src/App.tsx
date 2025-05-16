@@ -11,6 +11,7 @@ import AIAgents from "./pages/Services/AIAgents";
 import AIStrategy from "./pages/Services/AIStrategy";
 import SoftwareDevelopment from "./pages/Services/SoftwareDevelopment";
 import NotFound from "./pages/NotFound";
+import AxonoCaseStudy from "./pages/CaseStudy/Axono";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
           <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/axono" element={<AxonoCaseStudy />} />
           <Route path="/services/ai-agents" element={<AIAgents />} />
           <Route path="/services/ai-strategy" element={<AIStrategy />} />
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />

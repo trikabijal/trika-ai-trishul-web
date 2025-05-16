@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Users, Briefcase, Globe, Database, Rocket } from "lucide-react";
@@ -92,6 +91,11 @@ const verticals = [
     icon: <Rocket className="h-6 w-6" />,
     title: "Technology",
     cases: [
+      {
+        title: "AXONO Meeting Notes System",
+        description: "AI solution that transforms meeting notes into actionable tasks across project management tools, bridging the gap between conversation and execution.",
+        results: "85% reduction in lost action items; 42% increase in post-meeting task completion rates"
+      },
       {
         title: "DevOps Automation Suite",
         description: "Comprehensive CI/CD automation with intelligent testing, deployment, and monitoring capabilities.",
