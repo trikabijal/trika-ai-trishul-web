@@ -4,16 +4,12 @@ import CTA from "@/components/CTA";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import BetaSignupForm from "@/components/BetaSignupForm";
-
 const AxonoBlog = () => {
   const [loading, setLoading] = useState(false);
-  
   const openCalendly = () => {
     window.open("https://calendly.com/bijal-trika/30min", "_blank");
   };
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Navbar />
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
@@ -120,15 +116,11 @@ const AxonoBlog = () => {
             </div>
             
             <div className="mt-10 mb-4 text-center">
-              <p className="text-lg font-bold">Ready to make your meetings matter?</p>
+              <p className="text-lg font-bold">Want to chat about Axono, or anything Gen AI. </p>
             </div>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8 mb-12">
-              <Button 
-                onClick={openCalendly} 
-                className="bg-trika-primary hover:bg-trika-primary/90 text-white"
-                size="lg"
-              >
+              <Button onClick={openCalendly} className="bg-trika-primary hover:bg-trika-primary/90 text-white" size="lg">
                 Book a Demo
               </Button>
             </div>
@@ -137,8 +129,6 @@ const AxonoBlog = () => {
       </div>
       <CTA />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AxonoBlog;
