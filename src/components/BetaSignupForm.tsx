@@ -18,7 +18,8 @@ const formSchema = z.object({
   }),
 });
 
-type FormValues = z.infer<typeof formSchema>;
+// Explicitly type the form values to match FormData
+type FormValues = FormData;
 
 const BetaSignupForm = () => {
   const { submitToGoogleSheets, loading, error } = useGoogleSheets();
