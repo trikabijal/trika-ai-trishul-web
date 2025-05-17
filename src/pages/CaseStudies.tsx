@@ -16,7 +16,21 @@ const caseStudies = [
       "42% increase in post-meeting task completion rates",
       "2.5 hours saved per week per user on manual task entry"
     ],
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    link: "/case-studies/axono"
+  },
+  {
+    title: "Automating Customer Engagement with the AI Receptionist",
+    industry: "Customer Service",
+    challenge: "Businesses were struggling to manage high volumes of repetitive customer queries across multiple channels, consuming valuable staff time.",
+    solution: "We developed the AI Receptionist, an intelligent automation layer designed to handle 80% of all front-desk customer interactions on WhatsApp and voice calls.",
+    results: [
+      "40-60% reduction in manual receptionist workload",
+      "Faster response times, especially during high-traffic periods",
+      "Higher customer satisfaction with 24/7 availability"
+    ],
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    link: "/case-studies/ai-receptionist"
   },
   {
     title: "Intelligent Document Processing for Legal Firm",
@@ -112,6 +126,16 @@ const CaseStudies = () => {
                       </ul>
                     </div>
                   </div>
+                  {study.link && (
+                    <div className="mt-4">
+                      <Button variant="outline" className="text-trika-primary border-trika-primary" asChild>
+                        <Link to={study.link}>
+                          View Full Case Study
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
                 </div>
                 <div className={`rounded-xl overflow-hidden shadow-lg ${
                   index % 2 !== 0 ? 'lg:order-1' : ''

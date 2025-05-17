@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Users, Briefcase, Globe, Database, Rocket } from "lucide-react";
+import { Users, Briefcase, Globe, Database, Rocket, MessageSquare } from "lucide-react";
 
 interface Case {
   title: string;
@@ -33,6 +33,11 @@ const verticalsData: Vertical[] = [
         title: "Pharmaceutical Research Assistant",
         description: "An AI agent that accelerates drug discovery by analyzing research papers, clinical trials data, and molecular structures.",
         results: "40% reduction in early research phase timelines; 3.5x more potential compounds identified"
+      },
+      {
+        title: "AI Receptionist for Healthcare",
+        description: "Intelligent automation layer handling patient inquiries, appointment scheduling, and basic information collection across WhatsApp and voice calls.",
+        results: "50% reduction in front-desk workload; 24/7 appointment scheduling capability"
       }
     ]
   },
@@ -54,6 +59,11 @@ const verticalsData: Vertical[] = [
         title: "Automated Compliance Monitor",
         description: "Continuous regulatory compliance monitoring and documentation system that adapts to changing regulations.",
         results: "100% compliance documentation coverage; 71% reduction in manual compliance checks"
+      },
+      {
+        title: "AI Receptionist for Financial Services",
+        description: "Multi-channel virtual assistant handling client inquiries, scheduling consultations, and qualifying leads for financial advisors.",
+        results: "45% reduction in administrative work; improved lead qualification accuracy"
       }
     ]
   },
@@ -75,6 +85,11 @@ const verticalsData: Vertical[] = [
         title: "Dynamic Pricing Engine",
         description: "Real-time price optimization based on demand, competitor pricing, and market conditions.",
         results: "17% increase in profit margins; 23% improvement in competitive positioning"
+      },
+      {
+        title: "AI Receptionist for Retail",
+        description: "WhatsApp and voice-enabled virtual assistant handling product inquiries, store hours, and appointment bookings.",
+        results: "60% reduction in repetitive customer queries; increased customer satisfaction"
       }
     ]
   },
@@ -96,6 +111,11 @@ const verticalsData: Vertical[] = [
         title: "Supply Chain Optimization",
         description: "End-to-end supply chain monitoring and optimization with real-time adjustments to changing conditions.",
         results: "27% reduction in logistics costs; 35% improvement in on-time deliveries"
+      },
+      {
+        title: "AI Receptionist for Manufacturing",
+        description: "Automated customer service system handling supplier and client inquiries across multiple channels.",
+        results: "40% reduction in administrative workload; improved information accuracy"
       }
     ]
   },
@@ -122,6 +142,32 @@ const verticalsData: Vertical[] = [
         title: "IT Support Automation",
         description: "Intelligent support system that resolves common issues automatically and routes complex problems to the right specialists.",
         results: "76% of tickets resolved without human intervention; 3.2 minute average response time"
+      }
+    ]
+  },
+  {
+    icon: <MessageSquare className="h-6 w-6" />,
+    title: "Customer Service",
+    cases: [
+      {
+        title: "AI Receptionist",
+        description: "Intelligent automation layer handling customer inquiries, scheduling appointments, and qualifying leads across WhatsApp and voice calls.",
+        results: "40-60% reduction in manual receptionist workload; faster response times; higher customer satisfaction"
+      },
+      {
+        title: "Multilingual Support Bot",
+        description: "AI-powered customer service solution that provides instant responses in multiple languages across various channels.",
+        results: "24/7 availability in 12+ languages; 85% first-contact resolution rate"
+      },
+      {
+        title: "Customer Feedback Analysis",
+        description: "Advanced sentiment analysis system that processes customer feedback and identifies actionable insights.",
+        results: "72% faster issue identification; 38% improvement in customer retention"
+      },
+      {
+        title: "Self-Service Knowledge Base",
+        description: "Intelligent search and recommendation system that helps customers find answers to their questions.",
+        results: "65% reduction in support tickets; 91% customer satisfaction with self-service options"
       }
     ]
   }

@@ -12,6 +12,7 @@ import AIStrategy from "./pages/Services/AIStrategy";
 import SoftwareDevelopment from "./pages/Services/SoftwareDevelopment";
 import NotFound from "./pages/NotFound";
 import AxonoCaseStudy from "./pages/CaseStudy/Axono";
+import AIReceptionistCaseStudy from "./pages/CaseStudy/AIReceptionist";
 import Blogs from "./pages/Blogs";
 import AxonoBlog from "./pages/Blog/AxonoBlog";
 import OAuthCallback from "./pages/Auth/OAuthCallback";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/axono" element={<AxonoCaseStudy />} />
+          <Route path="/case-studies/ai-receptionist" element={<AIReceptionistCaseStudy />} />
           <Route path="/services/ai-agents" element={<AIAgents />} />
           <Route path="/services/ai-strategy" element={<AIStrategy />} />
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />
