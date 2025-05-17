@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-interface FormData {
+export interface FormData {
   name: string;
   email: string;
 }

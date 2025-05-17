@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useGoogleSheets } from "@/hooks/useGoogleSheets";
+import { useGoogleSheets, FormData } from "@/hooks/useGoogleSheets";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
