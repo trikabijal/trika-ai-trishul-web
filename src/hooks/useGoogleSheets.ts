@@ -18,7 +18,7 @@ export const useGoogleSheets = () => {
     try {
       // This should be replaced with your actual Google Sheets Web App URL
       // You need to deploy a Google Apps Script as a web app that receives form data
-      const sheetUrl = "https://script.google.com/macros/s/AKfycbyYy9A3BfnVLVjPaovXSUm82pDs2kwGe5oWZmYt53Fmi4R9GD0h_WTeKkILzsSnE_4j6A/exec";
+      const sheetUrl = "https://script.google.com/macros/s/AKfycbxrjbG8xqQLvz3Wy8Hb6BGAsEdSZy4nsXurwMD2AYLWfHfG_vgXS3RYZbAogW_w3-uwOQ/exec";
       
       const response = await fetch(sheetUrl, {
         method: "POST",
