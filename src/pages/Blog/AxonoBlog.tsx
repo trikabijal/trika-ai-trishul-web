@@ -120,9 +120,7 @@ const AxonoBlog = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8 mb-12">
-              <Button onClick={openCalendly} className="bg-trika-primary hover:bg-trika-primary/90 text-white" size="lg">
-                Book a Demo
-              </Button>
+              <Button onClick={openCalendly} className="bg-trika-primary hover:bg-trika-primary/90 text-white" size="lg">Let's Chat</Button>
             </div>
           </article>
         </div>
