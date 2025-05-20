@@ -40,6 +40,8 @@ const OAuthCallback = () => {
             headers: {
               "Content-Type": "application/json", // Correct for JSON
               // Don't include Access-Control-Allow-Origin here — it's a server response header
+              "Access-Control-Allow-Origin": "*", // This should be set on the server
+              
             },
             body: JSON.stringify({ code: code }),
             credentials: "omit", // Only if cookies/sessions are involved
