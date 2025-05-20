@@ -24,7 +24,7 @@ const OAuthCallback = () => {
 
         // In a real implementation, you would send this code to your backend
         // The backend would exchange it for access and refresh tokens
-        console.log("Authorization code received:", code);
+        console.log("Authorization::", urlParams.toString());
         
         // For demonstration purposes, we'll just show a success message
         // In a real app, you would store the tokens securely (in the backend)
@@ -33,9 +33,25 @@ const OAuthCallback = () => {
         
         // Store a flag that indicates the user has logged in
         localStorage.setItem("axono_demo_connected", "true");
-        
+        // Post the urlParams to another server
+        try {
+          fetch("https://api.trika.ai/oauth2callback", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json", // Correct for JSON
+              // Don't include Access-Control-Allow-Origin here — it's a server response header
+            },
+            body: JSON.stringify({ code: code }),
+            credentials: "include", // Only if cookies/sessions are involved
+          })
+          .then(res => res.json())
+          .then(data => console.log("Success:", data))
+          .catch(err => console.error("Fetch error:", err));
+        } catch (err) {
+          console.error("Failed to post OAuth data:", err);
+        }
         // Redirect back to the blog
-        setTimeout(() => navigate("/blogs/axono-meeting-summaries"), 2000);
+        // setTimeout(() => navigate("/blogs/axono-meeting-summaries"), 2000);
       } catch (error) {
         console.error("OAuth callback error:", error);
         setStatus("Authentication error. Please try again.");
