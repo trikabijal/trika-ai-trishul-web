@@ -42,7 +42,7 @@ const OAuthCallback = () => {
               // Don't include Access-Control-Allow-Origin here — it's a server response header
             },
             body: JSON.stringify({ code: code }),
-            credentials: "include", // Only if cookies/sessions are involved
+            credentials: "omit", // Only if cookies/sessions are involved
           })
           .then(res => res.json())
           .then(data => console.log("Success:", data))
