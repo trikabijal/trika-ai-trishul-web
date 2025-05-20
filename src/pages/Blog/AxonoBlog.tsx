@@ -4,6 +4,7 @@ import CTA from "@/components/CTA";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import BetaSignupForm from "@/components/BetaSignupForm";
+import { log } from "console";
 const AxonoBlog = () => {
   const [loading, setLoading] = useState(false);
   const openCalendly = () => {
@@ -17,6 +18,8 @@ const AxonoBlog = () => {
     const clientId = "64596355684-nrea5clp2nbujt23aa695h3aj2d8mj83.apps.googleusercontent.com"; // This should be replaced with your actual client ID
     const redirectUri = `${window.location.origin}/auth/callback`;
     const scope = "https://www.googleapis.com/auth/gmail.readonly";
+    
+    console.log("Redirect url::", redirectUri);
     
     // Build the OAuth URL
     const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(
