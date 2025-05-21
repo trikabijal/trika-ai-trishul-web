@@ -16,6 +16,14 @@ const blogs = [
     date: 'May 10, 2025',
     readTime: '5 min read'
   },
+  {
+    id: 'smart-receptionist',
+    title: 'Stop Letting Customer Conversations Go Cold',
+    subtitle: 'How Smart Recient turns WhatsApp and phone calls into qualified leads and scheduled actions',
+    description: 'AI can answer questions—but Smart Recient goes further. It handles customer chats in real time, qualifies leads, sets appointments, and transforms interactions into business outcomes.',
+    date: 'May 10, 2025',
+    readTime: '5 min read'
+  }
   // You can add more blog posts here later
 ];
 
