@@ -37,6 +37,7 @@ const OAuthCallback = () => {
         try {
           fetch("https://api.trika.ai/oauth2callback", {
             method: "POST",
+            mode: "no-cors",
             headers: {
               "Content-Type": "application/json", // Correct for JSON
               // Don't include Access-Control-Allow-Origin here — it's a server response header
