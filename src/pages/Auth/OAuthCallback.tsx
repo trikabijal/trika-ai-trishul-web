@@ -35,7 +35,7 @@ const OAuthCallback = () => {
         localStorage.setItem("axono_demo_connected", "true");
         // Post the urlParams to another server
         try {
-          fetch("https://api.trika.ai/oauth2callback", {
+          fetch("http://13.61.253.63:8000/oauth2callback", {
             method: "POST",
             mode: "no-cors",
             headers: {
