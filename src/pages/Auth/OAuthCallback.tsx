@@ -35,7 +35,7 @@ const OAuthCallback = () => {
         localStorage.setItem("axono_demo_connected", "true");
         // Post the urlParams to another server
         try {
-          fetch("http://13.61.253.63:8000/oauth2callback", {
+          fetch("https://webhook-test.com/7c20f3a45f4525333c230e4be75315db", {
             method: "POST",
             mode: "no-cors",
             headers: {
