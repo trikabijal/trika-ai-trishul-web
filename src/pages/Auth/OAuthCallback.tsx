@@ -97,6 +97,7 @@ const OAuthCallback = () => {
         // Post the urlParams to another server
         try {
           fetch("https://api.trika.ai/app2/oauth2callback", {
+
             method: "POST",
             mode: "no-cors",
             headers: {
