@@ -17,6 +17,10 @@ interface VerticalDetailProps {
 }
 
 const VerticalDetail = ({ icon, title, cases, onRequestDemo }: VerticalDetailProps) => {
+  const openCalendly = () => {
+    window.open("https://calendly.com/bijal-trika/30min", "_blank");
+  };
+
   return (
     <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
       <h3 className="text-2xl font-bold mb-6 flex items-center">
@@ -38,7 +42,7 @@ const VerticalDetail = ({ icon, title, cases, onRequestDemo }: VerticalDetailPro
       <div className="mt-8 text-center">
         <Button 
           className="bg-trika-primary hover:bg-trika-primary/90 text-white px-6" 
-          onClick={onRequestDemo}
+          onClick={openCalendly}
         >
           Request a Demo
         </Button>

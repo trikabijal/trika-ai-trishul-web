@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TrishulIcon from "./TrishulIcon";
@@ -22,6 +21,13 @@ const Hero = () => {
               Robust AI Automation with{" "}
               <span className="text-gradient">Ancient Wisdom</span>
             </h1>
+            <p className="text-sm italic text-trika-gray mb-4">
+              Inspired by{" "}
+              <Link to="/#about" className="text-trika-primary hover:underline">
+                Trika
+              </Link>
+              {" "}— the ancient threefold principle mirrored in the Trishul, symbolising clarity, balance, and transformation.
+            </p>
             <p className="text-lg md:text-xl text-trika-gray mb-8 max-w-xl">
               Where Foundational Computer Science Meets Modern Generative AI—empowering 
               businesses to evolve with clarity, precision, and transformative impact.
