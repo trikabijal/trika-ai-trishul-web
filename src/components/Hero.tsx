@@ -18,8 +18,8 @@ const Hero = () => {
               Enterprise-Grade AI Solutions
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Robust AI Automation with{" "}
-              <span className="text-gradient">Ancient Wisdom</span>
+              Robust AI Automation, Forged with{" "}
+              <span className="text-gradient">Deep Tech Knowledge</span>
             </h1>
             <p className="text-sm italic text-trika-gray mb-4">
               Inspired by{" "}
