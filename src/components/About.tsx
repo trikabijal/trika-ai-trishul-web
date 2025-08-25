@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TrishulIcon from "./TrishulIcon";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const About = () => {
   return <section id="about" className="section-padding bg-white">
@@ -76,10 +77,10 @@ const About = () => {
             </div>
             
             <Button className="group" asChild>
-              <Link to="/team">
-                Meet Our Team
+              <HashLink smooth to="#about">
+                Learn More About Us
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </HashLink>
             </Button>
           </div>
           
