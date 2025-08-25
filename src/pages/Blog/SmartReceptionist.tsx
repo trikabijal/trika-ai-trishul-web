@@ -8,7 +8,7 @@ import { log } from "console";
 const SmartReceptionist = () => {
   const [loading, setLoading] = useState(false);
   const openCalendly = () => {
-    window.open("https://calendly.com/bijal-trika/30min", "_blank");
+    window.open("https://calendly.com/bijal-trika/30-minute-ai-and-automation-conversation-clone", "_blank");
   };
 
   return <div className="min-h-screen bg-white">

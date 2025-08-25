@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const CTA = () => {
   const openCalendly = () => {
-    window.open("https://calendly.com/bijal-trika/30min", "_blank");
+    window.open("https://calendly.com/bijal-trika/30-minute-ai-and-automation-conversation-clone", "_blank");
   };
   
   return <section className="py-16 trika-gradient">
