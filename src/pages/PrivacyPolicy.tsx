@@ -13,7 +13,7 @@ const data = [
 
 const Section = ({ number, title, children }: { number: string; title: string; children: React.ReactNode }) => (
   <section className="mb-10">
-    <h2 className="text-lg font-bold text-blue-700 border-b-2 border-blue-700 pb-2 mb-4">
+    <h2 className="text-lg font-bold text-primary border-b-2 border-primary pb-2 mb-4">
       {number}. {title}
     </h2>
     {children}
@@ -23,8 +23,8 @@ const Section = ({ number, title, children }: { number: string; title: string; c
 const BulletList = ({ items }: { items: (string | React.ReactNode)[] }) => (
   <ul className="space-y-2 mb-3">
     {items.map((item, i) => (
-      <li key={i} className="flex gap-3 text-slate-600 text-sm leading-relaxed">
-        <span className="text-blue-700 font-bold mt-0.5 shrink-0">•</span>
+      <li key={i} className="flex gap-3 text-muted-foreground text-sm leading-relaxed">
+        <span className="text-primary font-bold mt-0.5 shrink-0">•</span>
         <span>{item}</span>
       </li>
     ))}
@@ -32,22 +32,22 @@ const BulletList = ({ items }: { items: (string | React.ReactNode)[] }) => (
 );
 
 const Callout = ({ label, children }: { label: string; children: React.ReactNode }) => (
-  <div className="border-l-4 border-blue-700 bg-blue-50 rounded-r-lg px-5 py-4">
-    <p className="text-xs font-bold tracking-widest text-blue-700 uppercase mb-2">{label}</p>
-    <div className="text-sm text-slate-700 leading-relaxed">{children}</div>
+  <div className="border-l-4 border-primary bg-trika-light rounded-r-lg px-5 py-4">
+    <p className="text-xs font-bold tracking-widest text-primary uppercase mb-2">{label}</p>
+    <div className="text-sm text-foreground leading-relaxed">{children}</div>
   </div>
 );
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans">
+    <div className="min-h-screen bg-background font-sans">
 
       {/* Header */}
-      <header className="bg-blue-700 px-6 py-12">
+      <header className="trika-gradient px-6 py-12">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-bold tracking-widest text-blue-200 uppercase mb-3">Trika.ai</p>
-          <h1 className="text-4xl font-bold text-white mb-2">Privacy Policy</h1>
-          <p className="text-blue-300 italic text-sm">Annotator Chrome Extension · Effective Date: March 2026</p>
+          <p className="text-xs font-bold tracking-widest text-primary-foreground/70 uppercase mb-3">Trika.ai</p>
+          <h1 className="text-4xl font-bold text-primary-foreground mb-2">Privacy Policy</h1>
+          <p className="text-primary-foreground/70 italic text-sm">Annotator Chrome Extension · Effective Date: March 2026</p>
         </div>
       </header>
 
@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
           <div className="overflow-x-auto">
             <table className="w-full text-xs border-collapse">
               <thead>
-                <tr className="bg-blue-700 text-white">
+                <tr className="trika-gradient text-primary-foreground">
                   {["Data", "Stored locally", "Sent to server", "Stored in server DB"].map((h) => (
                     <th key={h} className="text-left px-3 py-2 font-semibold">{h}</th>
                   ))}
@@ -76,9 +76,9 @@ export default function PrivacyPolicy() {
               </thead>
               <tbody>
                 {data.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-muted"}>
                     {row.map((cell, j) => (
-                      <td key={j} className="px-3 py-2 border-b border-slate-200 text-slate-600 align-top">
+                      <td key={j} className="px-3 py-2 border-b border-border text-muted-foreground align-top">
                         {cell}
                       </td>
                     ))}
@@ -150,10 +150,10 @@ export default function PrivacyPolicy() {
 
         {/* Section 8 */}
         <Section number="8" title="Data Sharing">
-          <p className="text-sm text-slate-600 mb-3">We do not sell, trade, or rent your personal information to any third party.</p>
-          <p className="text-sm text-slate-600 mb-3">We share data only in the following limited circumstances:</p>
+          <p className="text-sm text-muted-foreground mb-3">We do not sell, trade, or rent your personal information to any third party.</p>
+          <p className="text-sm text-muted-foreground mb-3">We share data only in the following limited circumstances:</p>
           <BulletList items={[
-            <span><strong>Google:</strong> OAuth authentication is processed by Google. Your use of Google sign-in is subject to Google's Privacy Policy at <a href="https://policies.google.com/privacy" className="text-blue-700 underline" target="_blank" rel="noreferrer">policies.google.com/privacy</a>.</span>,
+            <span><strong>Google:</strong> OAuth authentication is processed by Google. Your use of Google sign-in is subject to Google's Privacy Policy at <a href="https://policies.google.com/privacy" className="text-primary underline" target="_blank" rel="noreferrer">policies.google.com/privacy</a>.</span>,
             <span><strong>Railway:</strong> Our server infrastructure is hosted on Railway. Account data is stored on Railway's infrastructure subject to Railway's data processing terms.</span>,
             <span><strong>Legal requirements:</strong> We may disclose information if required by applicable law or in response to valid legal process.</span>,
           ]} />
@@ -161,19 +161,19 @@ export default function PrivacyPolicy() {
 
         {/* Section 9 */}
         <Section number="9" title="Your Rights and Account Deletion">
-          <p className="text-sm text-slate-600 mb-3">
+          <p className="text-sm text-muted-foreground mb-3">
             You have the right to access, correct, or delete the personal data we hold about you.
             If you are located in the European Economic Area, you have additional rights under
             applicable data protection law including the right to data portability and the right
             to object to processing.
           </p>
-          <p className="text-sm text-slate-600 mb-3">
+          <p className="text-sm text-muted-foreground mb-3">
             To delete your account and all associated data from our servers, email{" "}
-            <a href="mailto:bijal@trika.ai" className="text-blue-700 underline">bijal@trika.ai</a>{" "}
+            <a href="mailto:bijal@trika.ai" className="text-primary underline">bijal@trika.ai</a>{" "}
             with the subject line <strong>"Account Deletion Request"</strong>. We will process
             your request within 7 business days and confirm deletion by email.
           </p>
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-muted-foreground">
             To remove annotation data, uninstall the Extension from Chrome. All locally stored
             annotation data will be removed from your device immediately.
           </p>
@@ -181,17 +181,17 @@ export default function PrivacyPolicy() {
 
         {/* Section 10 */}
         <Section number="10" title="Children's Privacy">
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-muted-foreground">
             The Extension is not directed at children under the age of 13. We do not knowingly
             collect personal information from children under 13. Contact{" "}
-            <a href="mailto:bijal@trika.ai" className="text-blue-700 underline">bijal@trika.ai</a>{" "}
+            <a href="mailto:bijal@trika.ai" className="text-primary underline">bijal@trika.ai</a>{" "}
             if you believe we have inadvertently collected such information.
           </p>
         </Section>
 
         {/* Section 11 */}
         <Section number="11" title="Changes to This Policy">
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-muted-foreground">
             We may update this Privacy Policy from time to time. When we make material changes,
             we will update the effective date at the top of this document and notify users via
             the Extension's options page or by email. Continued use of the Extension after
@@ -201,10 +201,10 @@ export default function PrivacyPolicy() {
 
         {/* Section 12 */}
         <Section number="12" title="Contact">
-          <p className="text-sm text-slate-600 leading-relaxed">
+          <p className="text-sm text-muted-foreground leading-relaxed">
             Bijal Sanghavi<br />
             Trika.ai, Mumbai, India<br />
-            <a href="mailto:bijal@trika.ai" className="text-blue-700 underline">bijal@trika.ai</a>
+            <a href="mailto:bijal@trika.ai" className="text-primary underline">bijal@trika.ai</a>
           </p>
         </Section>
 
@@ -221,7 +221,7 @@ export default function PrivacyPolicy() {
 
       </main>
 
-      <footer className="text-center text-xs text-slate-400 py-8 border-t border-slate-200">
+      <footer className="text-center text-xs text-muted-foreground py-8 border-t border-border">
         Trika.ai · trika.ai · Effective March 2026
       </footer>
 
