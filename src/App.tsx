@@ -16,6 +16,7 @@ import Blogs from "./pages/Blogs";
 import AxonoBlog from "./pages/Blog/AxonoBlog";
 import SmartReceptionist from "./pages/Blog/SmartReceptionist";
 import OAuthCallback from "./pages/Auth/OAuthCallback";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/blogs/axono-meeting-summaries" element={<AxonoBlog />} />
           <Route path="/blogs/smart-receptionist" element={<SmartReceptionist />} />
           <Route path="/auth/callback" element={<OAuthCallback />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
