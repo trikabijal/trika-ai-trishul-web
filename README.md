@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trika.ai Website
 
-## Getting Started
+Marketing website for [Trika.ai](https://trika.ai) — AI-powered SaaS for automotive dealer networks.
 
-First, run the development server:
+## What is this
+
+A 5-page marketing site built with Next.js and Tailwind CSS:
+
+- **Home** — Hero, problem statement, AuditPro intro, credibility
+- **AuditPro** (`/auditpro`) — Full product page with audit modes, NADA 7-step process, positioning
+- **Company** (`/company`) — About Trika, why AuditPro, beliefs
+- **Founders** (`/founders`) — Bijal Sanghavi and Teena Shah bios
+- **Demo** (`/demo`) — Cal.com booking embed
+
+## How to build
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+./build.sh          # Install deps + production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or manually:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to run
 
-## Learn More
+```bash
+./run.sh            # Start production server on PORT (default 3000)
+```
 
-To learn more about Next.js, take a look at the following resources:
+Or for development:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev         # Dev server with hot reload at localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How to test
 
-## Deploy on Vercel
+```bash
+./test.sh           # Run lint + build check
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed to Railway. Push to `main` triggers deployment.
+
+- Config: `railway.json`
+- Output: Next.js standalone
+- Healthcheck: `GET /`
+
+## Tech stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- Railway (hosting)
+- Cal.com (demo booking)
