@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "AuditPro", href: "/auditpro" },
@@ -18,8 +19,15 @@ export default function Nav() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-semibold tracking-tight text-foreground"
+          className="flex items-center gap-2 text-xl font-semibold tracking-tight text-foreground"
         >
+          <Image
+            src="/images/trika-logo-transparent.png"
+            alt="Trika.ai"
+            width={32}
+            height={32}
+            className="h-8 w-8 object-contain"
+          />
           Trika.ai
         </Link>
 
