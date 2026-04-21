@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trika.ai — AI-powered SaaS for automotive dealer networks",
+  title: "trika.ai — AI-powered SaaS for automotive dealer networks",
   description:
-    "Trika.ai builds AI-powered SaaS for automotive dealer networks. Our flagship, AuditPro, verifies every day whether your sales team followed the 7-step Road to the Sale.",
+    "trika.ai builds AI-powered SaaS for automotive dealer networks. Our flagship, AuditPro, verifies every day whether your sales team followed the 7-step Road to the Sale.",
 };
 
 export default function RootLayout({

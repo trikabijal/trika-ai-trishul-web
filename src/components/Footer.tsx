@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,11 +7,20 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-10 sm:flex-row sm:justify-between">
         {/* Left: brand + copyright */}
         <div className="flex flex-col items-center gap-1 sm:items-start">
-          <span className="text-sm font-semibold text-foreground">
-            Trika.ai
-          </span>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/trika-logo-transparent.png"
+              alt="trika.ai"
+              width={20}
+              height={20}
+              className="h-5 w-5 object-contain"
+            />
+            <span className="text-sm font-semibold text-foreground">
+              trika.ai
+            </span>
+          </div>
           <span className="text-xs text-muted">
-            &copy; 2026 Trika.ai. All rights reserved.
+            &copy; 2026 trika.ai. All rights reserved.
           </span>
         </div>
 

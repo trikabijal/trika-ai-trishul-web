@@ -8,9 +8,12 @@ export default function DemoPage() {
   return (
     <div className="flex flex-col flex-1">
       {/* Header */}
-      <section className="px-6 pt-32 pb-12 sm:px-12 lg:px-24">
+      <section className="bg-gradient-to-b from-accent-light to-white px-6 pt-32 pb-12 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+            Get started
+          </p>
+          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Book a demo of AuditPro.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
@@ -27,7 +30,7 @@ export default function DemoPage() {
             className="w-full rounded-md border border-border"
             style={{ minHeight: "700px" }}
             frameBorder="0"
-            title="Book a demo with Trika.ai"
+            title="Book a demo with trika.ai"
           />
         </div>
       </section>

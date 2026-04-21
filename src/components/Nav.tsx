@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "AuditPro", href: "/auditpro" },
@@ -18,9 +19,16 @@ export default function Nav() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-semibold tracking-tight text-foreground"
+          className="flex items-center gap-2 text-xl font-semibold tracking-tight text-foreground"
         >
-          Trika.ai
+          <Image
+            src="/images/trika-logo-transparent.png"
+            alt="trika.ai"
+            width={32}
+            height={32}
+            className="h-8 w-8 object-contain"
+          />
+          trika.ai
         </Link>
 
         {/* Desktop links */}
@@ -36,7 +44,7 @@ export default function Nav() {
           ))}
           <Link
             href="/demo"
-            className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+            className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white shadow-sm shadow-accent/25 transition-colors hover:bg-accent-hover"
           >
             Book a Demo
           </Link>

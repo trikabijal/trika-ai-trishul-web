@@ -2,7 +2,7 @@
 
 ## Overview
 
-Trika.ai's website is a static marketing site built with Next.js App Router. All pages are statically generated at build time — no server-side rendering or API routes.
+trika.ai's website is a static marketing site built with Next.js App Router. All pages are statically generated at build time — no server-side rendering or API routes.
 
 ## Components
 
@@ -32,7 +32,10 @@ All pages except `/demo` are server components rendered at build time. The demo 
 Colors and fonts are defined as CSS custom properties in `globals.css` using `@theme inline`. Components use semantic token names (`text-muted`, `bg-surface`, `border-border`) rather than raw color values.
 
 ### Standalone output
-`next.config.ts` sets `output: "standalone"` for Railway deployment. This bundles only the files needed to run the server, reducing the deployment footprint.
+`next.config.ts` sets `output: "standalone"` for Railway deployment. Deploy config lives in `deployment/railway.json`. This bundles only the files needed to run the server, reducing the deployment footprint.
+
+### Static assets
+Static assets (logos, favicon) live in `public/images/`. Next.js serves `public/` at the root path.
 
 ### No component library
 The site uses plain Tailwind utility classes. No shadcn, no Radix, no component library. For a 5-page marketing site, the overhead isn't justified.
