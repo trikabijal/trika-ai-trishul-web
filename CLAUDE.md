@@ -49,9 +49,12 @@ npm run lint                    # Lint
 
 ## Copy registry
 
-**Before writing or modifying any marketing copy, read `copy/registry.md` first.**
+**Before writing or modifying any marketing copy, read the copy registry first.**
 
-This is the single source of truth for all trika.ai positioning, vocabulary, and channel-specific copy. It contains canonical copy blocks, a vocabulary table, rules checklist, and a channel map showing which blocks go where.
+- **Google Doc (master):** https://docs.google.com/document/d/1pyyGBFGye5cBOCVqn3geZqb6e_Lmm3NQtvtrsWkfFvc/edit
+- **Repo snapshot:** `copy/registry.md`
+
+The Google Doc is the single source of truth. The repo file is a snapshot. Both contain canonical copy blocks (grouped A-E), vocabulary table, rules checklist, and channel map.
 
 ## Content rules
 
