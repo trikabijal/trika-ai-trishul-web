@@ -6,7 +6,7 @@ Marketing website for trika.ai — AI-powered SaaS for automotive dealer network
 
 - **Framework:** Next.js 16 (App Router) + TypeScript
 - **Styling:** Tailwind CSS v4
-- **Hosting:** Railway (standalone output)
+- **Hosting:** Netlify (free tier, auto-deploys from main)
 - **Booking:** Cal.com embed (iframe)
 
 ## Project structure
@@ -45,8 +45,13 @@ npm run lint                    # Lint
 
 ## Environment
 
-- `PORT` — Server port (default: 3000, Railway injects this)
 - See `.env.example` for all variables
+
+## Copy registry
+
+**Before writing or modifying any marketing copy, read `copy/registry.md` first.**
+
+This is the single source of truth for all trika.ai positioning, vocabulary, and channel-specific copy. It contains canonical copy blocks, a vocabulary table, rules checklist, and a channel map showing which blocks go where.
 
 ## Content rules
 
@@ -57,11 +62,12 @@ This site follows strict content guidelines from the website brief:
 - **Never** add pricing, testimonials, or case studies without founder approval
 - **18+ years** experience claim applies to founders only, not AuditPro
 - Voice: confident, specific, dealership-floor language. No SaaS buzzwords.
-- See `dev/tasks/` for the full website brief if available
+- Keep US dealer jargon simple — founders are India-OEM insiders, not US floor veterans
+- See `copy/registry.md` for the full vocabulary table and rules checklist
 
 ## Deployment
 
-Railway via `railway.json`. Standalone Next.js output. Healthcheck on `/`.
+Netlify (free tier). Auto-deploys from `main`. Config in `netlify.toml`.
 
 ## Key contacts
 
