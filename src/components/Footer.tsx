@@ -10,17 +10,17 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <Image
               src="/images/trika-logo-transparent.png"
-              alt="Trika.ai"
+              alt="trika.ai"
               width={20}
               height={20}
               className="h-5 w-5 object-contain"
             />
             <span className="text-sm font-semibold text-foreground">
-              Trika.ai
+              trika.ai
             </span>
           </div>
           <span className="text-xs text-muted">
-            &copy; 2026 Trika.ai. All rights reserved.
+            &copy; 2026 trika.ai. All rights reserved.
           </span>
         </div>
 

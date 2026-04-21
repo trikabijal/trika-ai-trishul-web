@@ -2,7 +2,7 @@
 
 ## Overview
 
-Trika.ai's website is a static marketing site built with Next.js App Router. All pages are statically generated at build time — no server-side rendering or API routes.
+trika.ai's website is a static marketing site built with Next.js App Router. All pages are statically generated at build time — no server-side rendering or API routes.
 
 ## Components
 

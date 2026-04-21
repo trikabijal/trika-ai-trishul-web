@@ -1,6 +1,6 @@
-# Trika.ai Website
+# trika.ai Website
 
-Marketing website for [Trika.ai](https://trika.ai) — AI-powered SaaS for automotive dealer networks.
+Marketing website for [trika.ai](https://trika.ai) — AI-powered SaaS for automotive dealer networks.
 
 ## What is this
 
