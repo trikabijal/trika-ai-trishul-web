@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import LivePill from "./LivePill";
+import Reveal from "./Reveal";
+import CleanupDemo from "./CleanupDemo";
 
 export const metadata: Metadata = {
   title: "Just Talk — trika.ai",
@@ -63,42 +66,26 @@ export default function JustTalkPage() {
   return (
     <div className="flex flex-col flex-1">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-accent-light via-white to-white px-6 pt-32 pb-24 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+      <section className="relative overflow-hidden bg-gradient-to-br from-accent-light via-white to-white px-6 pt-32 pb-28 sm:px-12 lg:px-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
             On-device dictation
           </p>
-          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Just Talk. Your voice, typed — privately, on your Mac.
+          <h1 className="mx-auto mt-5 max-w-3xl text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+            Just talk. It&rsquo;s already typing.
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            Hold a key, speak, and clean text appears wherever you were typing.
-            Every word is transcribed and polished on your own device —
-            nothing is uploaded, nothing is stored on someone else&rsquo;s server.
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+            Hold a key, speak, and clean text appears wherever your cursor is —
+            transcribed and polished on your own Mac. Nothing is uploaded,
+            nothing is stored on anyone else&rsquo;s server.
           </p>
 
-          {/* The pill — a CSS echo of the live dictation HUD */}
-          <div className="mt-12 flex justify-center">
-            <div
-              className="flex items-center gap-3 rounded-full bg-neutral-900 px-6 py-4 shadow-xl"
-              style={{ border: "2px solid", borderColor: "#E6B450" }}
-            >
-              <span className="flex items-end gap-[3px]" aria-hidden="true">
-                {[10, 18, 26, 16, 22, 12, 20].map((h, i) => (
-                  <span
-                    key={i}
-                    className="w-[3px] rounded-full"
-                    style={{ height: `${h}px`, backgroundColor: "#E8483F" }}
-                  />
-                ))}
-              </span>
-              <span className="font-mono text-sm text-white/90">
-                just talk — it&rsquo;s already typing…
-              </span>
-            </div>
+          {/* Animated live pill — the product, moving */}
+          <div className="mt-14">
+            <LivePill />
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-4">
+          <div className="mt-14 flex flex-wrap justify-center gap-4">
             <a
               href="mailto:bijal@trika.ai?subject=Just%20Talk%20early%20access"
               className="inline-flex h-12 items-center justify-center rounded-md bg-accent px-8 text-base font-medium text-white shadow-md shadow-accent/25 transition-colors hover:bg-accent-hover"
@@ -117,7 +104,7 @@ export default function JustTalkPage() {
 
       {/* The thesis */}
       <section className="border-t border-border px-6 py-24 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-3xl">
+        <Reveal className="mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Most dictation apps send your voice to a server.
           </h2>
@@ -138,7 +125,7 @@ export default function JustTalkPage() {
               Your voice is yours. Just Talk keeps it that way.
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* How it works */}
@@ -147,23 +134,27 @@ export default function JustTalkPage() {
         className="scroll-mt-24 border-t border-border bg-gradient-to-b from-surface to-accent-light px-6 py-24 sm:px-12 lg:px-24"
       >
         <div className="mx-auto max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-            How it works
-          </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            Hold. Talk. Done.
-          </h2>
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+              How it works
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              Hold. Talk. Done.
+            </h2>
+          </Reveal>
           <ol className="mt-12 space-y-6">
-            {steps.map((s) => (
-              <li key={s.n} className="flex gap-4">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
-                  {s.n}
-                </span>
-                <div>
-                  <p className="text-base font-bold text-foreground">{s.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">{s.desc}</p>
-                </div>
-              </li>
+            {steps.map((s, i) => (
+              <Reveal key={s.n} delay={i * 90}>
+                <li className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
+                    {s.n}
+                  </span>
+                  <div>
+                    <p className="text-base font-bold text-foreground">{s.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-muted">{s.desc}</p>
+                  </div>
+                </li>
+              </Reveal>
             ))}
           </ol>
         </div>
@@ -172,57 +163,48 @@ export default function JustTalkPage() {
       {/* Why on-device */}
       <section className="border-t border-border px-6 py-24 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-            Why on-device
-          </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            Running on your machine isn&rsquo;t a limitation. It&rsquo;s the point.
-          </h2>
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+              Why on-device
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              Running on your machine isn&rsquo;t a limitation. It&rsquo;s the point.
+            </h2>
+          </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {whyOnDevice.map((f) => (
-              <div
-                key={f.title}
-                className="rounded-xl border border-accent/20 bg-white p-6 shadow-sm"
-              >
-                <p className="text-2xl">{f.icon}</p>
-                <h3 className="mt-3 text-base font-bold text-foreground">{f.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{f.desc}</p>
-              </div>
+            {whyOnDevice.map((f, i) => (
+              <Reveal key={f.title} delay={i * 80}>
+                <div className="h-full rounded-xl border border-accent/20 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <p className="text-2xl">{f.icon}</p>
+                  <h3 className="mt-3 text-base font-bold text-foreground">{f.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{f.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Cleanup */}
+      {/* Cleanup — animated before/after */}
       <section className="border-t border-border bg-surface px-6 py-24 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-            Not just transcription
-          </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            It writes down what you meant, not every &ldquo;um.&rdquo;
-          </h2>
-          <p className="mt-8 text-lg leading-relaxed text-muted">
-            Raw speech-to-text gives you the false starts, the repeated words,
-            the &ldquo;you know&rdquo;s. Just Talk cleans that up on-device — filler
-            removed, punctuation and casing fixed, sentences tidied — while
-            guarding your actual content so a clean-up pass never quietly drops a
-            clause you said.
-          </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-border bg-white p-5">
-              <p className="text-xs font-bold uppercase tracking-wider text-muted">You say</p>
-              <p className="mt-2 font-mono text-sm leading-relaxed text-muted">
-                &ldquo;um so the the best data would be like, you know, the last
-                quarter i think&rdquo;
-              </p>
-            </div>
-            <div className="rounded-lg border border-accent bg-accent-light p-5">
-              <p className="text-xs font-bold uppercase tracking-wider text-accent">Just Talk types</p>
-              <p className="mt-2 text-sm font-medium leading-relaxed text-foreground">
-                The best data would be the last quarter, I think.
-              </p>
-            </div>
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+              Not just transcription
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              It writes down what you meant, not every &ldquo;um.&rdquo;
+            </h2>
+            <p className="mt-8 text-lg leading-relaxed text-muted">
+              Raw speech-to-text gives you the false starts, the repeated words,
+              the &ldquo;you know&rdquo;s. Just Talk cleans that up on-device — filler
+              removed, punctuation and casing fixed, sentences tidied — while
+              guarding your actual content so a clean-up pass never quietly drops a
+              clause you said.
+            </p>
+          </Reveal>
+          <div className="mt-10">
+            <CleanupDemo />
           </div>
         </div>
       </section>
@@ -230,31 +212,37 @@ export default function JustTalkPage() {
       {/* Minimal permissions */}
       <section className="border-t border-border px-6 py-24 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Asks for two permissions. Not one more.
-          </h2>
-          <p className="mt-8 text-lg leading-relaxed text-muted">
-            To type for you, Just Talk needs your microphone and macOS
-            Accessibility — the same access a dictation tool has to have, and no
-            more. No screen recording, no input monitoring, no analytics account.
-          </p>
+          <Reveal>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Asks for two permissions. Not one more.
+            </h2>
+            <p className="mt-8 text-lg leading-relaxed text-muted">
+              To type for you, Just Talk needs your microphone and macOS
+              Accessibility — the same access a dictation tool has to have, and no
+              more. No screen recording, no input monitoring, no analytics account.
+            </p>
+          </Reveal>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-accent/20 bg-white p-6 shadow-sm">
-              <p className="text-2xl">🎙️</p>
-              <h3 className="mt-3 text-base font-bold text-foreground">Microphone</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                To hear you while you hold the key. Nothing is recorded to disk
-                beyond the moment it takes to transcribe.
-              </p>
-            </div>
-            <div className="rounded-xl border border-accent/20 bg-white p-6 shadow-sm">
-              <p className="text-2xl">⌨️</p>
-              <h3 className="mt-3 text-base font-bold text-foreground">Accessibility</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                To place the finished text into the app you were typing in, and to
-                use your activation key from anywhere.
-              </p>
-            </div>
+            <Reveal>
+              <div className="h-full rounded-xl border border-accent/20 bg-white p-6 shadow-sm">
+                <p className="text-2xl">🎙️</p>
+                <h3 className="mt-3 text-base font-bold text-foreground">Microphone</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  To hear you while you hold the key. Nothing is recorded to disk
+                  beyond the moment it takes to transcribe.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={90}>
+              <div className="h-full rounded-xl border border-accent/20 bg-white p-6 shadow-sm">
+                <p className="text-2xl">⌨️</p>
+                <h3 className="mt-3 text-base font-bold text-foreground">Accessibility</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  To place the finished text into the app you were typing in, and to
+                  use your activation key from anywhere.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -262,36 +250,37 @@ export default function JustTalkPage() {
       {/* Platforms */}
       <section className="border-t border-border bg-gradient-to-b from-surface to-accent-light px-6 py-24 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-            Where it runs
-          </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            Mac today. Your phone and PC next.
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted">
-            The same on-device engine is coming to the devices you type on most —
-            each one keeping the work on the device, not in the cloud.
-          </p>
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+              Where it runs
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              Mac today. Your phone and PC next.
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-muted">
+              The same on-device engine is coming to the devices you type on most —
+              each one keeping the work on the device, not in the cloud.
+            </p>
+          </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {platforms.map((p) => (
-              <div
-                key={p.name}
-                className={`rounded-xl border p-6 shadow-sm ${
-                  p.ready
-                    ? "border-green/30 bg-green-light"
-                    : "border-border bg-white"
-                }`}
-              >
-                <p className="text-base font-bold text-foreground">{p.name}</p>
-                <p
-                  className={`mt-2 text-xs font-bold uppercase tracking-wider ${
-                    p.ready ? "text-green" : "text-muted"
+            {platforms.map((p, i) => (
+              <Reveal key={p.name} delay={i * 80}>
+                <div
+                  className={`h-full rounded-xl border p-6 shadow-sm ${
+                    p.ready ? "border-green/30 bg-green-light" : "border-border bg-white"
                   }`}
                 >
-                  {p.status}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{p.note}</p>
-              </div>
+                  <p className="text-base font-bold text-foreground">{p.name}</p>
+                  <p
+                    className={`mt-2 text-xs font-bold uppercase tracking-wider ${
+                      p.ready ? "text-green" : "text-muted"
+                    }`}
+                  >
+                    {p.status}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{p.note}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
           <p className="mt-8 text-sm text-muted">
@@ -302,7 +291,7 @@ export default function JustTalkPage() {
 
       {/* Final CTA */}
       <section className="border-t border-border px-6 py-24 sm:px-12 lg:px-24">
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Try Just Talk on your Mac.
           </h2>
@@ -318,7 +307,7 @@ export default function JustTalkPage() {
               Request early access
             </a>
           </div>
-        </div>
+        </Reveal>
       </section>
     </div>
   );

@@ -22,3 +22,81 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+/* --- Just Talk page motion --------------------------------------------------- */
+
+/* Live-pill waveform bars — staggered vertical pulse */
+@keyframes jt-wave {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.jt-wave-bar {
+  transform-origin: center;
+  animation: jt-wave 900ms ease-in-out infinite;
+}
+
+/* Blinking caret after the typed text */
+@keyframes jt-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.jt-caret {
+  animation: jt-caret 1s step-end infinite;
+}
+
+/* Soft ambient glow under the hero pill */
+@keyframes jt-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+.jt-glow {
+  animation: jt-glow 3.5s ease-in-out infinite;
+}
+
+/* Scroll-reveal — start hidden/offset, .is-in removes the offset */
+.jt-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.jt-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jt-wave-bar,
+  .jt-caret,
+  .jt-glow {
+    animation: none;
+  }
+  .jt-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
