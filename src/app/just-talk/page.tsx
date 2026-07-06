@@ -3,6 +3,9 @@ import LivePill from "./LivePill";
 import Reveal from "./Reveal";
 import CleanupDemo from "./CleanupDemo";
 
+const DOWNLOAD_URL =
+  "https://github.com/trikabijal/roadtosale/releases/download/just-talk-v1.0.0/Just-Talk.dmg";
+
 export const metadata: Metadata = {
   title: "Just Talk — trika.ai",
   description:
@@ -85,12 +88,12 @@ export default function JustTalkPage() {
             <LivePill />
           </div>
 
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="mailto:bijal@trika.ai?subject=Just%20Talk%20early%20access"
+              href={DOWNLOAD_URL}
               className="inline-flex h-12 items-center justify-center rounded-md bg-accent px-8 text-base font-medium text-white shadow-md shadow-accent/25 transition-colors hover:bg-accent-hover"
             >
-              Request early access
+              Download for Mac
             </a>
             <a
               href="#how"
@@ -99,6 +102,9 @@ export default function JustTalkPage() {
               How it works
             </a>
           </div>
+          <p className="mt-4 text-sm text-muted">
+            Free · Apple Silicon · macOS&nbsp;14+ · signed &amp; notarized by Apple
+          </p>
         </div>
       </section>
 
@@ -296,17 +302,20 @@ export default function JustTalkPage() {
             Try Just Talk on your Mac.
           </h2>
           <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted">
-            We&rsquo;re rolling it out to early users now. Tell us what you type
-            all day and we&rsquo;ll get you set up.
+            Free to download. Open it, grant Microphone and Accessibility, and
+            start talking. Your voice never leaves the machine.
           </p>
           <div className="mt-10">
             <a
-              href="mailto:bijal@trika.ai?subject=Just%20Talk%20early%20access"
+              href={DOWNLOAD_URL}
               className="inline-flex h-12 items-center justify-center rounded-md bg-accent px-8 text-base font-medium text-white shadow-md shadow-accent/25 transition-colors hover:bg-accent-hover"
             >
-              Request early access
+              Download for Mac
             </a>
           </div>
+          <p className="mt-4 text-sm text-muted">
+            Apple Silicon · macOS&nbsp;14+ · signed &amp; notarized by Apple
+          </p>
         </Reveal>
       </section>
     </div>
