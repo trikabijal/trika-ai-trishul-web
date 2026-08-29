@@ -3,8 +3,11 @@ import LivePill from "./LivePill";
 import Reveal from "./Reveal";
 import CleanupDemo from "./CleanupDemo";
 
-const DOWNLOAD_URL =
-  "https://github.com/trikabijal/roadtosale/releases/download/just-talk-v1.0.0/Just-Talk.dmg";
+// Served from this site's own /public, NOT a GitHub release: the justtalk repo is PRIVATE, so a
+// release asset URL returns 404 for everyone without a token — it only appeared to work because the
+// old link pointed at a different, public repo. Self-hosting also keeps the download on trika.ai.
+// Update by dropping a new notarized DMG at public/downloads/Just-Talk.dmg.
+const DOWNLOAD_URL = "/downloads/Just-Talk.dmg";
 
 export const metadata: Metadata = {
   title: "Just Talk — trika.ai",
