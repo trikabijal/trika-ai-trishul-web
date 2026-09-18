@@ -4,3 +4,31 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# --- Just Talk downloads -------------------------------------------------------------------
+# The DMG is NOT hosted here any more. It lives as a release asset in the PUBLIC repo
+# trikabijal/justtalk-downloads, and GitHub's /releases/latest/download/<name> URL always resolves
+# to the newest release's asset of that name. So the file changes every release while this URL —
+# the one customers have — never does, and a Just Talk release never needs write access to this
+# site again.
+#
+# Why it changed: releases used to commit a ~30 MB binary into public/downloads/ here. That grew
+# this repo's history without bound (.git hit 60 MB, and history keeps it even after deletion) and
+# on 2026-09-18 the release failed at that step because its token was missing — the build was
+# notarized and correct, and the download silently stayed three weeks stale.
+#
+# The target repo must stay PUBLIC: release assets inherit repo visibility, and an asset in a
+# private repo 404s for everyone without a token.
+[[redirects]]
+  from = "/downloads/Just-Talk.dmg"
+  to = "https://github.com/trikabijal/justtalk-downloads/releases/latest/download/Just-Talk.dmg"
+  status = 302
+  force = true
+
+# Archived versions keep working: /downloads/Just-Talk-1.2.0.dmg → that release's own asset.
+# `force = true` on both, so a stale file left in public/downloads/ can never shadow the redirect.
+[[redirects]]
+  from = "/downloads/Just-Talk-:version.dmg"
+  to = "https://github.com/trikabijal/justtalk-downloads/releases/download/v:version/Just-Talk-:version.dmg"
+  status = 302
+  force = true

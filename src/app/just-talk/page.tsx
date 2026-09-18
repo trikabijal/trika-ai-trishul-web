@@ -3,10 +3,14 @@ import LivePill from "./LivePill";
 import Reveal from "./Reveal";
 import CleanupDemo from "./CleanupDemo";
 
-// Served from this site's own /public, NOT a GitHub release: the justtalk repo is PRIVATE, so a
-// release asset URL returns 404 for everyone without a token — it only appeared to work because the
-// old link pointed at a different, public repo. Self-hosting also keeps the download on trika.ai.
-// Update by dropping a new notarized DMG at public/downloads/Just-Talk.dmg.
+// Keep this a trika.ai path. netlify.toml redirects it (302) to the newest release asset in the
+// PUBLIC repo trikabijal/justtalk-downloads, so the binary changes every release and this URL never
+// does — and a Just Talk release never needs write access to this repo.
+//
+// The earlier note here said a GitHub release URL "returns 404 for everyone without a token". That
+// was true and worth heeding: it referred to the justtalk SOURCE repo, which is private. The
+// downloads repo is deliberately public and holds artifacts only, so its asset URLs resolve
+// anonymously. If that repo is ever made private, this download breaks for every user at once.
 const DOWNLOAD_URL = "/downloads/Just-Talk.dmg";
 
 export const metadata: Metadata = {
